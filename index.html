@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="steps-session">
+    <div class="container-cadastro-agencia">
+
+        <div class="progress-line">
+            <div class="progress-line-fill"></div>
+        </div>
+
+        <div class="icons-step">
+
+            <div class="icon-wrapper">
+                <div class="icons-step-content icon-selected">
+                    <img src="inicio.png" alt="">
+                </div>
+                <span>Início</span>
+            </div>
+
+            <div class="icon-wrapper">
+                <div class="icons-step-content">
+                    <img src="agencia.png" alt="">
+                </div>
+                <span>Agência</span>
+            </div>
+
+            <div class="icon-wrapper">
+                <div class="icons-step-content">
+                    <img src="usuario.png" alt="">
+                </div>
+                <span>Usuário</span>
+            </div>
+
+            <div class="icon-wrapper">
+                <div class="icons-step-content">
+                    <img src="documentos.png" alt="">
+                </div>
+                <span>Documentos</span>
+            </div>
+
+        </div>
+
+        
+
+    </div>
+</div>   
+<section style="background-color: #F8FAFC;">
+    <div class="steps-content">
+        <div class="step-content active" id="content-step-1">
+            <img src="inicio-step.png" alt="">
+            <h2>Onde está localizada sua agência?</h2>
+            <p>Escolha a localização para personalizarmos o cadastro</p>
+
+            <div class="local-selector">
+                <button class="local-btn active" id="btnBrasil">
+                    <div class="icon-local-selector">
+                        <img src="brasil-icon.png" alt="">
+                    </div>                
+                    <p>
+                        <b>Brasil</b>
+                        <br><br>
+                        Agência localizada no território brasileiro
+                    </p>                    
+                </button>
+                <button class="local-btn" id="btnInternacional">
+                    <div class="icon-local-selector">
+                        <img src="globo-icon.png" alt="">
+                    </div>                
+                    <p>
+                        <b>Exterior</b>
+                        <br><br>
+                        Agência localizada fora do Brasil
+                    </p> 
+                </button>
+            </div>
+
+            <!-- Formulário Brasil -->
+             <div class="form-session formulario-brasil">
+                <div style="background-color: #00BC7D;" class="base-form-layout-title">
+                    <p>Dados Iniciais - Brasil</p>
+                </div>
+                <div style="background-color: #FFFFFF;" class="base-form-layout">
+                    <form id="formBrasil" class="form-step">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>CNPJ <span class="required-label-red">*</span></label>
+                                <input class="input-form-medium" type="text" placeholder="00.000.000/0000-00">
+                            </div>
+
+                            <div class="form-group">
+                                <label>CEP <span class="required-label-red">*</span></label>
+                                <input class="input-form-medium" type="text" placeholder="00000-000">
+                            </div>
+                        </div>
+
+                        <p class="form-info">💡  O CEP será usado para preencher automaticamente os dados de endereço na próxima etapa</p>
+                    </form>
+                </div>
+             </div>           
+
+            <!-- Formulário Internacional -->
+            <div class="form-session formulario-inter"></div>
+                <div style="background-color: #00BC7D;" class="base-form-layout-title">
+                    <p>Cadastro Internacional</p>
+                </div>
+                <form id="formInternacional" class="form-step" style="display:none;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nome da Empresa <span class="required-label-red">*</span></label>
+                            <input class="input-form-medium" type="text" placeholder="00.000.000/0000-00">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nome do Contato <span class="required-label-red">*</span></label>
+                            <input class="input-form-medium" type="text" placeholder="00000-000">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Telefone <span class="required-label-red">*</span></label>
+                            <input class="input-form-medium" type="text" placeholder="00000-000">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email <span class="required-label-red">*</span></label>
+                            <input class="input-form-medium" type="text" placeholder="00000-000">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-internacional">Enviar</button>
+                </form>
+            </div>             
+        </div>
+
+        <div class="step-content" id="content-step-2">
+            <img src="agencia-step.png" alt="">
+            <h2>Informações da Agência</h2>
+            <p>Organize os dados em categorias para facilitar o preenchimento</p>
+        </div>
+
+        <div class="step-content" id="content-step-3">
+            <img src="usuario-step.png" alt="">
+            <h2>Usuário Principal</h2>
+            <p>Configure o usuário administrador que terá acesso completo ao sistema</p>
+        </div>
+
+        <div class="step-content" id="content-step-4">
+            <img src="documentos-step.png" alt="">
+            <h2>Documentação</h2>
+            <p>Envie os documentos necessários para concluir o cadastro</p>
+        </div>
+
+        <div class="steps-buttons">
+            <button id="btnPrev">Voltar</button>
+            <button id="btnNext">Continuar</button>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+
+<!-- gerenciamento dos steps -->
+<script>
+const steps = document.querySelectorAll('.icons-step-content');
+const progressFill = document.querySelector('.progress-line-fill');
+
+let currentStep = 0;
+
+function updateProgress() {
+    let p = (currentStep / (steps.length - 1)) * 100;
+    progressFill.style.width = p + "%";
+}
+// MOSTRAR / ESCONDER BOTÃO VOLTAR
+function atualizarBotaoVoltar() {
+    const btnPrev = document.getElementById('btnPrev');
+
+    if (currentStep === 0) {
+        btnPrev.classList.add("hidden");
+    } else {
+        btnPrev.classList.remove("hidden");
+    }
+}
+// ------------------------------------------------------
+// FUNÇÃO PARA AVANÇAR STEP
+// ------------------------------------------------------
+function avancarStep() {
+    if (currentStep < steps.length - 1) {
+
+        steps[currentStep].classList.remove('icon-selected');
+        steps[currentStep].classList.add('icon-completed');
+
+        currentStep++;
+
+        steps[currentStep].classList.remove('icon-completed');
+        steps[currentStep].classList.add('icon-selected');
+
+        updateProgress();
+        atualizarConteudo();
+        atualizarBotaoVoltar();
+    }
+}
+// ------------------------------------------------------
+// FUNÇÃO PARA VOLTAR STEP
+// ------------------------------------------------------
+function voltarStep() {
+    if (currentStep > 0) {
+
+        steps[currentStep].classList.remove('icon-selected');
+        steps[currentStep].classList.remove('icon-completed');
+
+        currentStep--;
+
+        steps[currentStep].classList.remove('icon-completed');
+        steps[currentStep].classList.add('icon-selected');
+
+        updateProgress();
+        atualizarConteudo();
+        atualizarBotaoVoltar();
+    }
+}
+// ------------------------------------------------------
+// BOTÕES CHAMANDO AS FUNÇÕES
+// ------------------------------------------------------
+document.getElementById('btnNext').addEventListener('click', avancarStep);
+document.getElementById('btnPrev').addEventListener('click', voltarStep);
+
+// Esconde o botão de voltar inicialmente
+atualizarBotaoVoltar();
+</script>
+
+<script>
+    function atualizarConteudo() {
+    const contents = document.querySelectorAll('.step-content');
+
+    contents.forEach((box, index) => {
+        if (index === currentStep) {
+            box.classList.add('active');
+        } else {
+            box.classList.remove('active');
+        }
+    });
+}
+</script>
+
+<script>
+   const btnNext = document.getElementById('btnNext'); 
+
+   const btnBrasil = document.getElementById('btnBrasil');
+const btnInternacional = document.getElementById('btnInternacional');
+const formBrasilControl = document.querySelector('.formulario-brasil');
+const formInterControl = document.querySelector('.formulario-inter');
+const formBrasil = document.getElementById('formBrasil');
+const formInternacional = document.getElementById('formInternacional');
+
+btnBrasil.addEventListener('click', () => {
+    btnBrasil.classList.add('active');
+    btnInternacional.classList.remove('active');
+
+    formBrasil.style.display = "flex";
+    formBrasilControl.style.display = "block";
+    formInternacional.style.display = "none";
+    
+    btnNext.style.display = "inline-block";
+});
+
+btnInternacional.addEventListener('click', () => {
+    btnInternacional.classList.add('active');
+    btnBrasil.classList.remove('active');
+
+    formBrasil.style.display = "none";
+    formBrasilControl.style.display = "none";
+    formInternacional.style.display = "flex";
+   
+    btnNext.style.display = "none";
+});
+</script>
+
+<script>
+    
+</script>
