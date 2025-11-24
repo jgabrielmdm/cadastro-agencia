@@ -105,35 +105,60 @@
              </div>           
 
             <!-- Formulário Internacional -->
-            <div class="form-session formulario-inter"></div>
-                <div style="background-color: #00BC7D;" class="base-form-layout-title">
+            <div class="form-session formulario-inter" style="display: none;">
+                <div style="background-color: #9810FA;" class="base-form-layout-title">
                     <p>Cadastro Internacional</p>
                 </div>
-                <form id="formInternacional" class="form-step" style="display:none;">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Nome da Empresa <span class="required-label-red">*</span></label>
-                            <input class="input-form-medium" type="text" placeholder="00.000.000/0000-00">
+                <div style="background-color: #FFFFFF;" class="base-form-layout">
+                    <form id="formInternacional" class="form-step" style="display:none;">
+                        <img class="icon-img-internacional" src="internacional-icon.png" alt="">
+                        <h2>Atendimento Personalizado</h2>
+                        <p>Deixe suas informações e nosso time especializado entrará em contato<br>para auxiliar em todas as etapas do cadastro internacional.</p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nome da Empresa <span class="required-label-red">*</span></label>
+                                <input class="input-form-large" type="text" placeholder="Nome da sua agência">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nome do Contato <span class="required-label-red">*</span></label>
+                                <input class="input-form-large" type="text" placeholder="Seu nome completo">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Telefone <span class="required-label-red">*</span></label>
+                                <input class="input-form-medium" type="text" placeholder="+00 000 000 0000">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email <span class="required-label-red">*</span></label>
+                                <input class="input-form-medium" type="text" placeholder="seu@email.com">
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label>Nome do Contato <span class="required-label-red">*</span></label>
-                            <input class="input-form-medium" type="text" placeholder="00000-000">
-                        </div>
+                        <button type="submit" class="submit-internacional">Enviar</button>
 
-                        <div class="form-group">
-                            <label>Telefone <span class="required-label-red">*</span></label>
-                            <input class="input-form-medium" type="text" placeholder="00000-000">
-                        </div>
+                        <div class="form-info-inter">
+                            <p class="form-info-inter-title">Nosso time irá auxiliar com:</p>
 
-                        <div class="form-group">
-                            <label>Email <span class="required-label-red">*</span></label>
-                            <input class="input-form-medium" type="text" placeholder="00000-000">
+                            <div class="form-info-inter-itens">
+                                <div>
+                                    <p><span style="color:#00BC7D;">✓</span> Documentação internacional</p>
+                                    <br>
+                                    <p><span style="color:#00BC7D;">✓</span> Configuração da conta</p>
+                                </div>
+                                
+                                <div>
+                                    <p><span style="color:#00BC7D;">✓</span> Validação de dados</p>   
+                                    <br>                             
+                                    <p><span style="color:#00BC7D;">✓</span> Suporte em múltiplos idiomas</p>
+                                </div>
+                                
+                            </div>
                         </div>
-                    </div>
-
-                    <button type="submit" class="submit-internacional">Enviar</button>
-                </form>
+                    </form>
+                </div>
+                
             </div>             
         </div>
 
@@ -141,6 +166,265 @@
             <img src="agencia-step.png" alt="">
             <h2>Informações da Agência</h2>
             <p>Organize os dados em categorias para facilitar o preenchimento</p>
+
+            <div class="tabs-container" style="margin-top: 40px;">
+                <div class="tab-item active" data-tab="0">Dados Gerais</div>
+                <div class="tab-item" data-tab="1">Contatos</div>
+                <div class="tab-item" data-tab="2">Contatos Fin.</div>
+                <div class="tab-item" data-tab="3">Referências</div>
+                <div class="tab-item" data-tab="4">Bancário</div>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-panel active">
+                    <div class="form-session">
+                        <div style="background-color: #00BC7D;" class="base-form-layout-title">
+                            <p>Informações da Empresa</p>
+                        </div>
+                        <div style="background-color: #FFFFFF;" class="base-form-layout">
+                            <form id="formBrasil" class="form-step">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Razão Social <span class="required-label-red">*</span></label>
+                                        <input class="input-form-medium" type="text" placeholder="Nome legal da empresa">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Nome Fantasia <span class="required-label-red">*</span></label>
+                                        <input class="input-form-medium" type="text" placeholder="Nome comercial">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Inscrição Estadual</label>
+                                        <input class="input-form-large" type="text" placeholder="">
+                                    </div>
+                                </div>                                
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="form-session" style="margin-top: 20px;">
+                        <div style="background-color: #155DFC;" class="base-form-layout-title">
+                            <p>Endereço Completo</p>
+                        </div>
+                        <div style="background-color: #FFFFFF;" class="base-form-layout">
+                            <form id="formBrasil" class="form-step">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>País <span class="required-label-red">*</span></label>
+                                        <input class="input-form-small" type="text" placeholder="" value="Brasil" disabled>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Estado <span class="required-label-red">*</span></label>
+                                        <input class="input-form-small" type="text" placeholder="UF">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Cidade <span class="required-label-red">*</span></label>
+                                        <input class="input-form-small" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Endereço <span class="required-label-red">*</span></label>
+                                        <input class="input-form-large" type="text" placeholder="Rua, Avenida...">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Número <span class="required-label-red">*</span></label>
+                                        <input class="input-form-small" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Bairro <span class="required-label-red">*</span></label>
+                                        <input class="input-form-small" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Complemento <span class="required-label-red">*</span></label>
+                                        <input class="input-form-small" type="text" placeholder="Sala, andar, bloco...">
+                                    </div>
+                                </div>                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-panel">
+                    <div class="form-session">
+                        <div style="background-color: #9810FA;" class="base-form-layout-title">
+                            <p>Informações de Contato</p>
+                        </div>
+                        <div style="background-color: #FFFFFF;" class="base-form-layout">
+                            <form id="formBrasil" class="form-step">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Telefone Principal <span class="required-label-red">*</span></label>
+                                        <input class="input-form-small" type="text" placeholder="(00) 00000-0000">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Telefone Secundário</label>
+                                        <input class="input-form-small" type="text" placeholder="(00) 00000-0000">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Emergência <span class="required-label-red">*</span></label>
+                                        <input class="input-form-small" type="text" placeholder="(00) 00000-0000">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>E-mail Principal <span class="required-label-red">*</span></label>
+                                        <input class="input-form-medium" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Website</label>
+                                        <input class="input-form-medium" type="text" placeholder="https://">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>E-mail Diretor <span class="required-label-red">*</span></label>
+                                        <input class="input-form-medium" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>E-mail Financeiro <span class="required-label-red">*</span></label>
+                                        <input class="input-form-medium" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Sócio-Proprietário / Diretor</label>
+                                        <input class="input-form-medium" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Contato Financeiro <span class="required-label-red">*</span></label>
+                                        <input class="input-form-medium" type="text" placeholder="">
+                                    </div>
+                                </div>                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-panel">
+                    <div class="form-session">
+                        <div style="background-color: #F54900;" class="base-form-layout-title">
+                            <p>Contatos Financeiros Adicionais</p>
+                        </div>
+                        <div style="background-color: #FFFFFF;" class="base-form-layout">
+                            <form id="formBrasil" class="form-step">
+                                <div class="finance-contacts-wrapper">
+
+                                    <div id="financeContactsList"></div>
+
+                                    <button id="addFinanceContact" class="add-contact-btn" type="button">
+                                        ✚ Adicionar contato financeiro
+                                    </button>
+
+                                </div>                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-panel">
+                    <div class="form-session">
+                        <div style="background-color: #155DFC;" class="base-form-layout-title">
+                            <p>Referências Comerciais e Bancárias</p>
+                        </div>
+                        <div style="background-color: #FFFFFF;" class="base-form-layout">
+                            <form id="formBrasil" class="form-step">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Referência Comercial Principal <span class="required-label-red">*</span></label>
+                                        <input class="input-form-medium" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Referência Comercial Secundária</label>
+                                        <input class="input-form-medium" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Referência Bancária Principal <span class="required-label-red">*</span></label>
+                                        <input class="input-form-medium" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Referência Bancária Secundária</label>
+                                        <input class="input-form-medium" type="text" placeholder="">
+                                    </div>
+                                </div>                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-panel">
+                     <div class="form-session">
+                        <div style="background-color: #00A63E;" class="base-form-layout-title">
+                            <p>Informações Bancárias</p>
+                        </div>
+                        <div style="background-color: #FFFFFF;" class="base-form-layout">
+                            <form id="formBrasil" class="form-step">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Código do Banco <span class="required-label-red">*</span></label>
+                                        <input class="input-form-medium" type="text" placeholder="000">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Nome do Banco <span class="required-label-red">*</span></label>
+                                        <input class="input-form-medium" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Agência <span class="required-label-red">*</span></label>
+                                        <input class="input-form-small" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Conta <span class="required-label-red">*</span></label>
+                                        <input class="input-form-small" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Dígito <span class="required-label-red">*</span></label>
+                                        <input class="input-form-small" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Nome do Favorecido <span class="required-label-red">*</span></label>
+                                        <input class="input-form-medium" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>CPF/CNPJ do Favorecido <span class="required-label-red">*</span></label>
+                                        <input class="input-form-medium" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>CEP <span class="required-label-red">*</span></label>
+                                        <input class="input-form-large" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Como Conheceu a E-HTL? <span class="required-label-red">*</span></label>
+                                        <input class="input-form-large" type="text" placeholder="">
+                                    </div>
+                                </div>                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-buttons">
+                <button id="prevTab" style="display:none;">⮜ Aba anterior</button>
+                <button id="nextTab">Próxima aba ⮞ </button>
+            </div>
         </div>
 
         <div class="step-content" id="content-step-3">
@@ -161,126 +445,6 @@
         </div>
     </div>
 </section>
-
+<script src="script.js"></script>
 </body>
 </html>
-
-<!-- gerenciamento dos steps -->
-<script>
-const steps = document.querySelectorAll('.icons-step-content');
-const progressFill = document.querySelector('.progress-line-fill');
-
-let currentStep = 0;
-
-function updateProgress() {
-    let p = (currentStep / (steps.length - 1)) * 100;
-    progressFill.style.width = p + "%";
-}
-// MOSTRAR / ESCONDER BOTÃO VOLTAR
-function atualizarBotaoVoltar() {
-    const btnPrev = document.getElementById('btnPrev');
-
-    if (currentStep === 0) {
-        btnPrev.classList.add("hidden");
-    } else {
-        btnPrev.classList.remove("hidden");
-    }
-}
-// ------------------------------------------------------
-// FUNÇÃO PARA AVANÇAR STEP
-// ------------------------------------------------------
-function avancarStep() {
-    if (currentStep < steps.length - 1) {
-
-        steps[currentStep].classList.remove('icon-selected');
-        steps[currentStep].classList.add('icon-completed');
-
-        currentStep++;
-
-        steps[currentStep].classList.remove('icon-completed');
-        steps[currentStep].classList.add('icon-selected');
-
-        updateProgress();
-        atualizarConteudo();
-        atualizarBotaoVoltar();
-    }
-}
-// ------------------------------------------------------
-// FUNÇÃO PARA VOLTAR STEP
-// ------------------------------------------------------
-function voltarStep() {
-    if (currentStep > 0) {
-
-        steps[currentStep].classList.remove('icon-selected');
-        steps[currentStep].classList.remove('icon-completed');
-
-        currentStep--;
-
-        steps[currentStep].classList.remove('icon-completed');
-        steps[currentStep].classList.add('icon-selected');
-
-        updateProgress();
-        atualizarConteudo();
-        atualizarBotaoVoltar();
-    }
-}
-// ------------------------------------------------------
-// BOTÕES CHAMANDO AS FUNÇÕES
-// ------------------------------------------------------
-document.getElementById('btnNext').addEventListener('click', avancarStep);
-document.getElementById('btnPrev').addEventListener('click', voltarStep);
-
-// Esconde o botão de voltar inicialmente
-atualizarBotaoVoltar();
-</script>
-
-<script>
-    function atualizarConteudo() {
-    const contents = document.querySelectorAll('.step-content');
-
-    contents.forEach((box, index) => {
-        if (index === currentStep) {
-            box.classList.add('active');
-        } else {
-            box.classList.remove('active');
-        }
-    });
-}
-</script>
-
-<script>
-   const btnNext = document.getElementById('btnNext'); 
-
-   const btnBrasil = document.getElementById('btnBrasil');
-const btnInternacional = document.getElementById('btnInternacional');
-const formBrasilControl = document.querySelector('.formulario-brasil');
-const formInterControl = document.querySelector('.formulario-inter');
-const formBrasil = document.getElementById('formBrasil');
-const formInternacional = document.getElementById('formInternacional');
-
-btnBrasil.addEventListener('click', () => {
-    btnBrasil.classList.add('active');
-    btnInternacional.classList.remove('active');
-
-    formBrasil.style.display = "flex";
-    formBrasilControl.style.display = "block";
-    formInternacional.style.display = "none";
-    
-    btnNext.style.display = "inline-block";
-});
-
-btnInternacional.addEventListener('click', () => {
-    btnInternacional.classList.add('active');
-    btnBrasil.classList.remove('active');
-
-    formBrasil.style.display = "none";
-    formBrasilControl.style.display = "none";
-    formInternacional.style.display = "flex";
-   
-    btnNext.style.display = "none";
-});
-</script>
-
-<script>
-    
-</script>

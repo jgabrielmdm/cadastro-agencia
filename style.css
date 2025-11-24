@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Overpass", sans-serif;
 }
 
 .steps-session {
@@ -105,7 +106,9 @@
 }
 
 #btnPrev {
-    background: #64748B; /* cinza bonito */
+    background: transparent;
+    color: #0A0A0A;
+    border: 1px solid #E2E8F0;
 }
 
 #btnPrev.hidden {
@@ -120,7 +123,7 @@
 }
 
 .icon-completed img {
-    display: none; /* esconde o ícone original */
+    display: none;
 }
 
 .icon-completed::after {
@@ -222,7 +225,7 @@
 .next-step-btn,
 .submit-internacional {
     padding: 12px;
-    background: #00BC7D;
+    background: #9810FA;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -259,6 +262,7 @@
     display: flex;
     gap: 20px;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .form-group {
@@ -274,6 +278,7 @@
 .base-form-layout label{
     text-align: left;
     font-size: 14px;
+    font-weight: 600;
 }
 
 .base-form-layout input{    
@@ -284,7 +289,12 @@
 }
 
 .input-form-large{
-    width: 690px;
+    width: 732px;
+    padding: 10px 12px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 .input-form-medium{
@@ -297,7 +307,12 @@
 }
 
 .input-form-small{
-    width: 175px;
+    width: 215px;
+    padding: 10px 12px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 .form-info {
@@ -309,4 +324,171 @@
     border-radius: 14px;
     border: 1px solid #A4F4CF;
     padding: 16px 20px;
+}
+
+.icon-img-internacional{
+    margin: 0 auto;
+    width: 80px;
+}
+
+#formInternacional h2{
+    font-size: 20px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+#formInternacional p{
+    font-size: 16px;
+}
+
+.form-info-inter{
+    margin-top: 12px;
+    font-size: 14px;
+    text-align: left;
+    background-color: #F8FAFC;
+    border-radius: 14px;
+    border: 1px solid #E2E8F0;
+    padding: 16px 20px;
+}
+
+.form-info-inter-title{
+    color: #314158;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.form-info-inter-itens{
+    display: flex;
+    font-size: 14px;
+    gap: 100px;
+}
+
+/* STEP AGENCIA */
+
+
+.tabs-container {
+    margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  justify-content: center;
+}
+
+.tab-item {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  transition: .3s;
+  font-weight: 500;
+  color: #333;
+}
+
+.tab-item:hover {
+  background: #f6f6f6;
+}
+
+.tab-item.active {
+  
+  color: white;
+  border: none;
+}
+
+/* cores específicas por aba ativa */
+.tab-item.active[data-tab="0"] {
+  background: linear-gradient(90deg,#05d09c,#009f6b); /* Dados Gerais */
+}
+
+.tab-item.active[data-tab="1"] {
+  background-color: #9810FA; /* Contatos */
+}
+
+.tab-item.active[data-tab="2"] {
+  background-color: #F54900; /* Contatos Fin. */
+}
+
+.tab-item.active[data-tab="3"] {
+  background-color: #00A6F4; /* Referências */
+}
+
+.tab-item.active[data-tab="4"] {
+  background-color: #00A63E; /* Bancário */
+}
+
+.tab-content {
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 120px;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+#nextTab, #prevTab {
+  width: 145px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #d8d8d8;
+  color: #333;
+}
+
+/* CONTATO FINANCEIRO */
+
+.form-row-fin {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.finance-contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-contact-btn {
+    width: 250px;
+    margin: 0 auto;
+    background: #F54900;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.remove-contact-btn {
+    background-color: transparent;
+    color: #FB2C36;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    cursor: pointer;
+    height: fit-content;
+    font-weight: 600;
+}
+
+.fin-group-pos{
+    position: relative;
+}
+
+.pos-remove-btn{
+    position: absolute;
+    right: -30px;
+    top: 22px;
 }
