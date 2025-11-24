@@ -431,6 +431,113 @@
             <img src="usuario-step.png" alt="">
             <h2>Usuário Principal</h2>
             <p>Configure o usuário administrador que terá acesso completo ao sistema</p>
+
+            <div class="form-session" style="margin-top: 20px;">
+                <div style="background-color: #9810FA;" class="base-form-layout-title">
+                    <p>Informações Pessoais</p>
+                </div>
+                <div style="background-color: #FFFFFF;" class="base-form-layout">
+                    <form id="formBrasil" class="form-step">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nome <span class="required-label-red">*</span></label>
+                                <input class="input-form-medium" type="text" placeholder="Primeiro nome">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Sobrenome</label>
+                                <input class="input-form-medium" type="text" placeholder="Sobrenome">
+                            </div>
+
+                            <div class="form-group">
+                                <label>CPF <span class="required-label-red">*</span></label>
+                                <input class="input-form-medium" type="text" placeholder="000.000.000-00">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Cargo  <span class="required-label-red">*</span></label>
+                                <input class="input-form-medium" type="text" placeholder="Ex: Diretor, Gerente...">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Data de Nascimento  <span class="required-label-red">*</span></label>
+                                <input class="input-form-medium" type="text" placeholder="Ex: Diretor, Gerente...">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Gênero  <span class="required-label-red">*</span></label>
+                                <input class="input-form-medium" type="text" placeholder="Selecione">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Telefone  <span class="required-label-red">*</span></label>
+                                <input class="input-form-small" type="text" placeholder="(00) 00000-0000">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Celular  <span class="required-label-red">*</span></label>
+                                <input class="input-form-small" type="text" placeholder="(00) 00000-0000">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Ramal  <span class="required-label-red">*</span></label>
+                                <input class="input-form-small" type="text" placeholder="0000">
+                            </div>
+                        </div>                                
+                    </form>
+                </div>
+            </div>
+
+            <div class="form-session" style="margin-top: 20px;">
+                <div style="background-color: #009689;" class="base-form-layout-title">
+                    <p>Credenciais de Acesso</p>
+                </div>
+                <div style="background-color: #FFFFFF;" class="base-form-layout">
+                    <form id="formBrasil" class="form-step">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>E-mail <span class="required-label-red">*</span></label>
+                                <input class="input-form-large" type="text" placeholder="usuario@email.com">
+                                <p style="font-size: 12px; text-align: left; margin-top: 5px;">Este e-mail será usado para recuperação de senha e notificações do sistema</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Login (Username) <span class="required-label-red">*</span></label>
+                                <input class="input-form-large" type="text" placeholder="">
+                                <p class="form-info">⚠️ Sem caracteres especiais (@, #, %, etc.) e deve ser diferente do e-mail</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Senha <span class="required-label-red">*</span></label>
+                                <input class="input-form-medium" type="text" placeholder="">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Confirmar Senha <span class="required-label-red">*</span></label>
+                                <input class="input-form-medium" type="text" placeholder="">
+                            </div>
+                        </div>                                
+                    </form>                    
+                </div>
+                <div class="form-info-inter">
+                        <p class="form-info-inter-title">Requisitos de Senha</p>
+
+                        <div class="form-info-inter-itens">
+                            <div>
+                                <p><span style="color:#00BC7D;">✓</span> Mínimo de 8 caracteres</p>
+                                <br>
+                                <p><span style="color:#00BC7D;">✓</span> Números</p>
+                            </div>
+                            
+                            <div>
+                                <p><span style="color:#00BC7D;">✓</span> Letras maiúsculas e minúsculas</p>   
+                                <br>                             
+                                <p><span style="color:#00BC7D;">✓</span> Caracteres especiais (!@#$%)</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+            </div>
         </div>
 
         <div class="step-content" id="content-step-4">
