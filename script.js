@@ -23,20 +23,25 @@ function atualizarBotaoVoltar() {
 // FUNÇÃO PARA AVANÇAR STEP
 // ------------------------------------------------------
 function avancarStep() {
-    if (currentStep < steps.length - 1) {
 
+    const lastStepIndex = steps.length - 1;
+
+    // Se não é o último step → só avança
+    if (currentStep < lastStepIndex) {
         steps[currentStep].classList.remove('icon-selected');
         steps[currentStep].classList.add('icon-completed');
 
         currentStep++;
-
-        steps[currentStep].classList.remove('icon-completed');
         steps[currentStep].classList.add('icon-selected');
 
         updateProgress();
         atualizarConteudo();
         atualizarBotaoVoltar();
+        return;
     }
+
+    // 👉 SE ESTIVER NO ÚLTIMO STEP → FINALIZA CADASTRO
+    finalizarCadastro();
 }
 // ------------------------------------------------------
 // FUNÇÃO PARA VOLTAR STEP
@@ -79,21 +84,27 @@ function atualizarConteudo() {
         }
     });
 
-    // 👉 Step 2 = esconder Next e mostrar botão "Próxima aba"
+    // Step 2 = esconder Next e mostrar botão "Próxima aba"
     if (currentStep === 1) {
         btnNext.style.display = "none";
         btnNextStepAgencia.style.display = "inline-block";
     }
 
-    // 👉 Step 1, 3 e 4 = botão Next padrão
+    // Step 1, 3 e 4 = botão Next padrão
     else {
         btnNextStepAgencia.style.display = "none";
         btnNext.style.display = "inline-block";
     }
 
-    // 👇 Quando chegar no Step 2: resetar abas
+    // Quando chegar no Step 2: resetar abas
     if (currentStep === 1) {
         changeTab(0);
+    }
+
+    if (currentStep === steps.length - 1) {
+    btnNext.textContent = "Finalizar Cadastro";
+    } else {
+        btnNext.textContent = "Continuar";
     }
 }
 
@@ -265,3 +276,145 @@ function removeFinanceContact(index) {
 // Inicia com 1 grupo
 financeContacts.push({ nome: "", email: "", telefone: "" });
 renderFinanceContacts();
+
+
+
+// CONTROLE DE DOCUMENTOS
+
+const MAX_SIZE_MB = 10;
+const allowedTypes = ["image/jpeg", "image/png", "application/pdf"];
+
+document.querySelectorAll(".file-input").forEach(input => {
+    input.addEventListener("change", function () {
+        const file = input.files[0];
+        const card = input.closest(".doc-card");
+        const icon = card.querySelector(".status-icon");
+        const msg = card.querySelector(".status-msg");
+        const statusBox = card.querySelector(".upload-status");
+
+        // sempre limpa a área
+        statusBox.style.display = "flex";
+        icon.textContent = "";
+        msg.textContent = "";
+
+        if (!file) {
+            statusBox.style.display = "none";
+            return;
+        }
+
+        // validar extensão
+        if (!allowedTypes.includes(file.type)) {
+            icon.textContent = "❌";
+            icon.style.color = "#FB2C36";
+            msg.textContent = "Formato inválido (JPG, PNG ou PDF)";
+            input.value = "";
+            return;
+        }
+
+        // validar tamanho
+        if (file.size > MAX_SIZE_MB * 1024 * 1024) {
+            icon.textContent = "❌";
+            icon.style.color = "#FB2C36";
+            msg.textContent = "Arquivo maior que 10MB";
+            input.value = "";
+            return;
+        }
+
+        // sucesso
+        icon.textContent = "✔️";
+        icon.style.color = "#00BC7D";
+        msg.textContent = file.name;
+    });
+});
+
+
+
+
+// MONTANDO JSON
+
+function montarPayloadCadastro() {
+    const payload = {};
+
+    document.querySelectorAll("input[name], select[name], textarea[name]").forEach(input => {
+
+        if (input.type === "file") return;
+        if (input.closest(".formulario-inter")) return;
+        
+
+        // 🔥 Checkbox retorna boolean
+        if (input.type === "checkbox") {
+            payload[input.name] = input.checked;
+        } 
+        else {
+            payload[input.name] = input.value.trim();
+        }
+    });
+
+    payload.contatos_financeiros_adicionais = financeContacts;
+
+    return payload;
+}
+
+function finalizarCadastro() {
+    const jsonPayload = montarPayloadCadastro();
+
+    console.log(jsonPayload);    
+}
+
+
+// MONTANDO UPLOAD DOS ARQUIVOS
+
+// function montarUploads(formData) {
+
+//     document.querySelectorAll("input[type='file'][name]").forEach(input => {
+//         if (input.files[0]) {
+//             formData.append(input.name, input.files[0]);
+//         }
+//     });
+// }
+
+// function montarFormDataFinal() {
+//     const formData = new FormData();
+    
+//     formData.append("payload", JSON.stringify(montarPayloadCadastro()));
+    
+//     montarUploads(formData);
+
+//     return formData;
+// }
+
+// async function finalizarCadastro() {
+
+//     const fd = montarFormDataFinal();
+
+//     const response = await fetch("/api/cadastro-agencia", {
+//         method: "POST",
+//         body: fd
+//     });
+
+//     const result = await response.json();
+//     console.log(result);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DEV TEST - FORÇAR STEP
+// currentStep = 3;
+// atualizarConteudo();
+// updateProgress();
+// atualizarBotaoVoltar();

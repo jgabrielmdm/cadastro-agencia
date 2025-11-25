@@ -43,11 +43,7 @@
                 </div>
                 <span>Documentos</span>
             </div>
-
         </div>
-
-        
-
     </div>
 </div>   
 <section style="background-color: #F8FAFC;">
@@ -82,7 +78,7 @@
 
             <!-- Formulário Brasil -->
              <div class="form-session formulario-brasil">
-                <div style="background-color: #00BC7D;" class="base-form-layout-title">
+                <div style="background-color: #1D5E2F;" class="base-form-layout-title">
                     <p>Dados Iniciais - Brasil</p>
                 </div>
                 <div style="background-color: #FFFFFF;" class="base-form-layout">
@@ -90,12 +86,12 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label>CNPJ <span class="required-label-red">*</span></label>
-                                <input class="input-form-medium" type="text" placeholder="00.000.000/0000-00">
+                                <input name="cadastro-agencias-cnpj" class="input-form-medium" type="text" placeholder="00.000.000/0000-00">
                             </div>
 
                             <div class="form-group">
                                 <label>CEP <span class="required-label-red">*</span></label>
-                                <input class="input-form-medium" type="text" placeholder="00000-000">
+                                <input name="cadastro-agencias-cep"  class="input-form-medium" type="text" placeholder="00000-000">
                             </div>
                         </div>
 
@@ -106,7 +102,7 @@
 
             <!-- Formulário Internacional -->
             <div class="form-session formulario-inter" style="display: none;">
-                <div style="background-color: #9810FA;" class="base-form-layout-title">
+                <div style="background-color: #1D5E2F;" class="base-form-layout-title">
                     <p>Cadastro Internacional</p>
                 </div>
                 <div style="background-color: #FFFFFF;" class="base-form-layout">
@@ -117,22 +113,22 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Nome da Empresa <span class="required-label-red">*</span></label>
-                                <input class="input-form-large" type="text" placeholder="Nome da sua agência">
+                                <input name="inter-nome-empresa" class="input-form-large" type="text" placeholder="Nome da sua agência">
                             </div>
 
                             <div class="form-group">
                                 <label>Nome do Contato <span class="required-label-red">*</span></label>
-                                <input class="input-form-large" type="text" placeholder="Seu nome completo">
+                                <input name="inter-nome-do-contato" class="input-form-large" type="text" placeholder="Seu nome completo">
                             </div>
 
                             <div class="form-group">
                                 <label>Telefone <span class="required-label-red">*</span></label>
-                                <input class="input-form-medium" type="text" placeholder="+00 000 000 0000">
+                                <input name="inter-telefone" class="input-form-medium" type="text" placeholder="+00 000 000 0000">
                             </div>
 
                             <div class="form-group">
                                 <label>Email <span class="required-label-red">*</span></label>
-                                <input class="input-form-medium" type="text" placeholder="seu@email.com">
+                                <input name="inter-email" class="input-form-medium" type="text" placeholder="seu@email.com">
                             </div>
                         </div>
 
@@ -157,8 +153,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
-                
+                </div>                
             </div>             
         </div>
 
@@ -178,25 +173,25 @@
             <div class="tab-content">
                 <div class="tab-panel active">
                     <div class="form-session">
-                        <div style="background-color: #00BC7D;" class="base-form-layout-title">
+                        <div style="background-color: #1D5E2F;" class="base-form-layout-title">
                             <p>Informações da Empresa</p>
                         </div>
                         <div style="background-color: #FFFFFF;" class="base-form-layout">
-                            <form id="formBrasil" class="form-step">
+                            <form id="form-info-empresa" class="form-step">
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>Razão Social <span class="required-label-red">*</span></label>
-                                        <input class="input-form-medium" type="text" placeholder="Nome legal da empresa">
+                                        <input name="cadastro-agencia-razao-social" class="input-form-medium" type="text" placeholder="Nome legal da empresa">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Nome Fantasia <span class="required-label-red">*</span></label>
-                                        <input class="input-form-medium" type="text" placeholder="Nome comercial">
+                                        <input name="cadastro-agencia-nome-fantasia" class="input-form-medium" type="text" placeholder="Nome comercial">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Inscrição Estadual</label>
-                                        <input class="input-form-large" type="text" placeholder="">
+                                        <input name="cadastro-agencia-inscricao-estadual" class="input-form-large" type="text" placeholder="">
                                     </div>
                                 </div>                                
                             </form>
@@ -204,45 +199,45 @@
                     </div>
 
                     <div class="form-session" style="margin-top: 20px;">
-                        <div style="background-color: #155DFC;" class="base-form-layout-title">
+                        <div style="background-color: #1D5E2F;" class="base-form-layout-title">
                             <p>Endereço Completo</p>
                         </div>
                         <div style="background-color: #FFFFFF;" class="base-form-layout">
-                            <form id="formBrasil" class="form-step">
+                            <form id="form-endereco-completo" class="form-step">
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>País <span class="required-label-red">*</span></label>
-                                        <input class="input-form-small" type="text" placeholder="" value="Brasil" disabled>
+                                        <input name="cadastro-agencia-pais" class="input-form-small" type="text" placeholder="" value="Brasil" disabled>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Estado <span class="required-label-red">*</span></label>
-                                        <input class="input-form-small" type="text" placeholder="UF">
+                                        <input name="cadastro-agencia-estado" class="input-form-small" type="text" placeholder="UF">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Cidade <span class="required-label-red">*</span></label>
-                                        <input class="input-form-small" type="text" placeholder="">
+                                        <input name="cadastro-agencia-cidade" class="input-form-small" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Endereço <span class="required-label-red">*</span></label>
-                                        <input class="input-form-large" type="text" placeholder="Rua, Avenida...">
+                                        <input name="cadastro-agencia-endereco" class="input-form-large" type="text" placeholder="Rua, Avenida...">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Número <span class="required-label-red">*</span></label>
-                                        <input class="input-form-small" type="text" placeholder="">
+                                        <input name="cadastro-agencia-numero" class="input-form-small" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Bairro <span class="required-label-red">*</span></label>
-                                        <input class="input-form-small" type="text" placeholder="">
+                                        <input name="cadastro-agencia-bairro" class="input-form-small" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Complemento <span class="required-label-red">*</span></label>
-                                        <input class="input-form-small" type="text" placeholder="Sala, andar, bloco...">
+                                        <input name="cadastro-agencia-complemento" class="input-form-small" type="text" placeholder="Sala, andar, bloco...">
                                     </div>
                                 </div>                                
                             </form>
@@ -252,55 +247,55 @@
 
                 <div class="tab-panel">
                     <div class="form-session">
-                        <div style="background-color: #9810FA;" class="base-form-layout-title">
+                        <div style="background-color: #1D5E2F;" class="base-form-layout-title">
                             <p>Informações de Contato</p>
                         </div>
                         <div style="background-color: #FFFFFF;" class="base-form-layout">
-                            <form id="formBrasil" class="form-step">
+                            <form id="form-informacoes-de-contato" class="form-step">
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>Telefone Principal <span class="required-label-red">*</span></label>
-                                        <input class="input-form-small" type="text" placeholder="(00) 00000-0000">
+                                        <input name="ctt-telefone-principal" class="input-form-small" type="text" placeholder="(00) 00000-0000">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Telefone Secundário</label>
-                                        <input class="input-form-small" type="text" placeholder="(00) 00000-0000">
+                                        <input name="cadastro-agencia-ctt-tel-secundario" class="input-form-small" type="text" placeholder="(00) 00000-0000">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Emergência <span class="required-label-red">*</span></label>
-                                        <input class="input-form-small" type="text" placeholder="(00) 00000-0000">
+                                        <input name="cadastro-agencia-ctt-tel-emergencia" class="input-form-small" type="text" placeholder="(00) 00000-0000">
                                     </div>
 
                                     <div class="form-group">
                                         <label>E-mail Principal <span class="required-label-red">*</span></label>
-                                        <input class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-agencia-email-principal" class="input-form-medium" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Website</label>
-                                        <input class="input-form-medium" type="text" placeholder="https://">
+                                        <input name="cadastro-agencia-website" class="input-form-medium" type="text" placeholder="https://">
                                     </div>
 
                                     <div class="form-group">
                                         <label>E-mail Diretor <span class="required-label-red">*</span></label>
-                                        <input class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-agencia-email-diretor" class="input-form-medium" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>E-mail Financeiro <span class="required-label-red">*</span></label>
-                                        <input class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-agencia-email-fin" class="input-form-medium" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Sócio-Proprietário / Diretor</label>
-                                        <input class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-agencia-socio-proprietario" class="input-form-medium" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Contato Financeiro <span class="required-label-red">*</span></label>
-                                        <input class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-agencia-ctt-fin" class="input-form-medium" type="text" placeholder="">
                                     </div>
                                 </div>                                
                             </form>
@@ -310,11 +305,11 @@
 
                 <div class="tab-panel">
                     <div class="form-session">
-                        <div style="background-color: #F54900;" class="base-form-layout-title">
+                        <div style="background-color: #1D5E2F;" class="base-form-layout-title">
                             <p>Contatos Financeiros Adicionais</p>
                         </div>
                         <div style="background-color: #FFFFFF;" class="base-form-layout">
-                            <form id="formBrasil" class="form-step">
+                            <form id="form-contatos-financeiros-adicionais" class="form-step">
                                 <div class="finance-contacts-wrapper">
 
                                     <div id="financeContactsList"></div>
@@ -322,7 +317,6 @@
                                     <button id="addFinanceContact" class="add-contact-btn" type="button">
                                         ✚ Adicionar contato financeiro
                                     </button>
-
                                 </div>                                
                             </form>
                         </div>
@@ -331,30 +325,30 @@
 
                 <div class="tab-panel">
                     <div class="form-session">
-                        <div style="background-color: #155DFC;" class="base-form-layout-title">
+                        <div style="background-color: #1D5E2F;" class="base-form-layout-title">
                             <p>Referências Comerciais e Bancárias</p>
                         </div>
                         <div style="background-color: #FFFFFF;" class="base-form-layout">
-                            <form id="formBrasil" class="form-step">
+                            <form id="form-ref-comerciais-bancarias" class="form-step">
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>Referência Comercial Principal <span class="required-label-red">*</span></label>
-                                        <input class="input-form-medium" type="text" placeholder="">
+                                        <input name="ref-comercial-principal" class="input-form-medium" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Referência Comercial Secundária</label>
-                                        <input class="input-form-medium" type="text" placeholder="">
+                                        <input name="ref-comercial-secundaria" class="input-form-medium" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Referência Bancária Principal <span class="required-label-red">*</span></label>
-                                        <input class="input-form-medium" type="text" placeholder="">
+                                        <input name="ref-bancaria-principal" class="input-form-medium" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Referência Bancária Secundária</label>
-                                        <input class="input-form-medium" type="text" placeholder="">
+                                        <input name="ref-bancaria-secundaria" class="input-form-medium" type="text" placeholder="">
                                     </div>
                                 </div>                                
                             </form>
@@ -364,55 +358,73 @@
 
                 <div class="tab-panel">
                      <div class="form-session">
-                        <div style="background-color: #00A63E;" class="base-form-layout-title">
+                        <div style="background-color: #1D5E2F;" class="base-form-layout-title">
                             <p>Informações Bancárias</p>
                         </div>
                         <div style="background-color: #FFFFFF;" class="base-form-layout">
-                            <form id="formBrasil" class="form-step">
+                            <form id="form-informacoes-bancarias" class="form-step">
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>Código do Banco <span class="required-label-red">*</span></label>
-                                        <input class="input-form-medium" type="text" placeholder="000">
+                                        <input name="cadastro-cod-banco" class="input-form-medium" type="text" placeholder="000">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Nome do Banco <span class="required-label-red">*</span></label>
-                                        <input class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-nome-do-banco" class="input-form-medium" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Agência <span class="required-label-red">*</span></label>
-                                        <input class="input-form-small" type="text" placeholder="">
+                                        <input name="cadastro-agencia-banco" class="input-form-small" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Conta <span class="required-label-red">*</span></label>
-                                        <input class="input-form-small" type="text" placeholder="">
+                                        <input name="cadastro-conta-banco" class="input-form-small" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Dígito <span class="required-label-red">*</span></label>
-                                        <input class="input-form-small" type="text" placeholder="">
+                                        <input name="cadastro-digito-banco" class="input-form-small" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Nome do Favorecido <span class="required-label-red">*</span></label>
-                                        <input class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-nome-favorecido" class="input-form-medium" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
                                         <label>CPF/CNPJ do Favorecido <span class="required-label-red">*</span></label>
-                                        <input class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-cpf-cnpj-favorecido" class="input-form-medium" type="text" placeholder="">
                                     </div>
 
                                     <div class="form-group">
-                                        <label>CEP <span class="required-label-red">*</span></label>
-                                        <input class="input-form-large" type="text" placeholder="">
+                                        
+                                        <label class="checkbox-label">                                            
+                                            Marque se a agência possui conta poupança vinculada
+                                            <input 
+                                                type="checkbox"
+                                                name="cadastro-agencia-conta-poupanca"
+                                                class="input-checkbox"
+                                            >
+                                        </label>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Como Conheceu a E-HTL? <span class="required-label-red">*</span></label>
-                                        <input class="input-form-large" type="text" placeholder="">
+                                        <select name="cadastro-conheceu-ehtl" class="input-form-large select-input">
+                                            <option value="" selected disabled>Selecione uma opção</option>
+                                            <option value="Eventos">Eventos</option>
+                                            <option value="Reserva Fácil">Reserva Fácil</option>
+                                            <option value="E-mail Marketing">E-mail Marketing</option>
+                                            <option value="Sites de busca">Sites de busca</option>
+                                            <option value="Amigos">Amigos</option>
+                                            <option value="Agência de viagem">Agência de viagem</option>
+                                            <option value="Indicação">Indicação</option>
+                                            <option value="Executivo">Executivo</option>
+                                            <option value="Outros">Outros</option>
+                                        </select>
                                     </div>
                                 </div>                                
                             </form>
@@ -433,11 +445,11 @@
             <p>Configure o usuário administrador que terá acesso completo ao sistema</p>
 
             <div class="form-session" style="margin-top: 20px;">
-                <div style="background-color: #9810FA;" class="base-form-layout-title">
+                <div style="background-color: #1D5E2F;" class="base-form-layout-title">
                     <p>Informações Pessoais</p>
                 </div>
                 <div style="background-color: #FFFFFF;" class="base-form-layout">
-                    <form id="formBrasil" class="form-step">
+                    <form id="form-cadastro-usuario-principal" class="form-step">
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Nome <span class="required-label-red">*</span></label>
@@ -489,11 +501,11 @@
             </div>
 
             <div class="form-session" style="margin-top: 20px;">
-                <div style="background-color: #009689;" class="base-form-layout-title">
+                <div style="background-color: #1D5E2F;" class="base-form-layout-title">
                     <p>Credenciais de Acesso</p>
                 </div>
                 <div style="background-color: #FFFFFF;" class="base-form-layout">
-                    <form id="formBrasil" class="form-step">
+                    <form id="form-credenciais-de-acesso" class="form-step">
                         <div class="form-row">
                             <div class="form-group">
                                 <label>E-mail <span class="required-label-red">*</span></label>
@@ -544,6 +556,155 @@
             <img src="documentos-step.png" alt="">
             <h2>Documentação</h2>
             <p>Envie os documentos necessários para concluir o cadastro</p>
+
+            <div class="form-session" style="margin-top: 20px;">
+                <div style="background-color: #1D5E2F;" class="base-form-layout-title">
+                    <p>Documentos Obrigatórios</p>
+                </div>
+                <div style="background-color: #FFFFFF;" class="base-form-layout">
+                    <div class="doc-grid">
+                        <div class="doc-card" data-doc="contrato-social">
+                            <div class="doc-info">
+                                <h4>Contrato Social <span class="required">*</span></h4>
+                                <p>Documento que registra a constituição da empresa</p>
+                            </div>
+
+                            <label class="upload-box">
+                                <input name="doc-contrato-social" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <span class="upload-btn">📁 Anexar Arquivo</span>
+                            </label>
+
+                            <div class="upload-status" style="display:none;">
+                                <span class="status-icon"></span>
+                                <span class="status-msg"></span>
+                            </div>
+                        </div>
+
+                        <div class="doc-card" data-doc="contrato-social">
+                            <div class="doc-info">
+                                <h4>Cartão CNPJ <span class="required">*</span></h4>
+                                <p>Comprovante de inscrição no CNPJ</p>
+                            </div>
+
+                            <label class="upload-box">
+                                <input name="doc-comp-inscricao-cnpj" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <span class="upload-btn">📁 Anexar Arquivo</span>
+                            </label>
+
+                            <div class="upload-status" style="display:none;">
+                                <span class="status-icon"></span>
+                                <span class="status-msg"></span>
+                            </div>
+                        </div>
+
+                        <div class="doc-card" data-doc="contrato-social">
+                            <div class="doc-info">
+                                <h4>RG do Diretor <span class="required">*</span></h4>
+                                <p>Documento de identificação do responsável legal</p>
+                            </div>
+
+                            <label class="upload-box">
+                                <input name="doc-id-responsavel-legal" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <span class="upload-btn">📁 Anexar Arquivo</span>
+                            </label>
+
+                            <div class="upload-status" style="display:none;">
+                                <span class="status-icon"></span>
+                                <span class="status-msg"></span>
+                            </div>
+                        </div>
+
+                        <div class="doc-card" data-doc="contrato-social">
+                            <div class="doc-info">
+                                <h4>CPF do Diretor <span class="required">*</span></h4>
+                                <p>Cadastro de Pessoa Física do responsável</p>
+                            </div>
+
+                            <label class="upload-box">
+                                <input name="doc-cadastro-pes-fis-resp" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <span class="upload-btn">📁 Anexar Arquivo</span>
+                            </label>
+
+                            <div class="upload-status" style="display:none;">
+                                <span class="status-icon"></span>
+                                <span class="status-msg"></span>
+                            </div>
+                        </div>
+
+                        <div class="doc-card" data-doc="contrato-social">
+                            <div class="doc-info">
+                                <h4>Comprovante de Residência <span class="required">*</span></h4>
+                                <p>Conta de luz, água ou telefone (até 90 dias)</p>
+                            </div>
+
+                            <label class="upload-box">
+                                <input name="doc-comp-residencia" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <span class="upload-btn">📁 Anexar Arquivo</span>
+                            </label>
+
+                            <div class="upload-status" style="display:none;">
+                                <span class="status-icon"></span>
+                                <span class="status-msg"></span>
+                            </div>
+                        </div>
+
+                        <div class="doc-card" data-doc="contrato-social">
+                            <div class="doc-info">
+                                <h4>Contrato Social <span class="required">*</span></h4>
+                                <p>Documento que registra a constituição da empresa</p>
+                            </div>
+
+                            <label class="upload-box">
+                                <input name="doc-contrato-social" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <span class="upload-btn">📁 Anexar Arquivo</span>
+                            </label>
+
+                            <div class="upload-status" style="display:none;">
+                                <span class="status-icon"></span>
+                                <span class="status-msg"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-session" style="margin-top: 20px;">
+                <div style="background-color: #1D5E2F;" class="base-form-layout-title">
+                    <p>Documentos Opcionais</p>
+                </div>
+                <div style="background-color: #FFFFFF;" class="base-form-layout">
+                    <div class="doc-grid">
+                        <div class="doc-card" data-doc="contrato-social">
+                            <div class="doc-info">
+                                <h4>Cadastur</h4>
+                                <p>Cadastro de prestadores de serviços turísticos</p>
+                            </div>
+
+                            <label class="upload-box">
+                                <input name="doc-cadastur" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <span class="upload-btn">📁 Anexar Arquivo</span>
+                            </label>
+
+                            <div class="upload-status" style="display:none;">
+                                <span class="status-icon"></span>
+                                <span class="status-msg"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="form-info">
+                    <b style="font-size: 16px;">Instruções de Upload</b><br><br>
+
+                    <span style="font-size: 14px; line-height: 20px;">
+                        • Formatos aceitos: PDF, JPG, PNG, DOC, DOCX<br>
+                        • Tamanho máximo por arquivo: 10MB<br>
+                        • Certifique-se de que os documentos estejam legíveis e atualizados
+                    </span>
+                </p>
+            </div>
         </div>
 
         <div class="steps-buttons">
