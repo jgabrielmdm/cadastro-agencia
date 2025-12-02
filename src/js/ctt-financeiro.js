@@ -16,7 +16,7 @@ function renderFinanceContacts() {
         row.innerHTML = `
             <div class="form-group">
                 <label>Nome <span class="required-label-red">*</span></label>
-                <input class="input-form-small" type="text"
+                <input required class="input-form-small" type="text"
                     placeholder="Nome Completo"
                     value="${contact.nome ?? ''}"
                     oninput="updateFinanceValue(${index}, 'nome', this.value)">
@@ -24,7 +24,7 @@ function renderFinanceContacts() {
 
             <div class="form-group">
                 <label>E-mail <span class="required-label-red">*</span></label>
-                <input class="input-form-small" type="text"
+                <input required class="input-form-small email-validation" type="text"
                     placeholder="email@exemplo.com"
                     value="${contact.email ?? ''}"
                     oninput="updateFinanceValue(${index}, 'email', this.value)">
@@ -32,7 +32,7 @@ function renderFinanceContacts() {
 
             <div class="form-group fin-group-pos">
                 <label>Telefone <span class="required-label-red">*</span></label>
-                <input class="input-form-small" type="text"
+                <input required class="input-form-small telefone-mask telefone-validation" type="text"
                     placeholder="(00) 00000-0000"
                     value="${contact.telefone ?? ''}"
                     oninput="updateFinanceValue(${index}, 'telefone', this.value)">

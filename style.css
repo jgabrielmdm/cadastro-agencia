@@ -430,6 +430,18 @@
   color: #333;
 }
 
+.input-error {
+    border: 1px solid #e02b2b !important;
+    background-color: #ffe8e8;
+}
+
+.error-message {
+    font-size: 12px;
+    color: #e02b2b;
+    margin-top: 4px;
+    text-align: left;
+}
+
 /* CONTATO FINANCEIRO */
 
 .form-row-fin {

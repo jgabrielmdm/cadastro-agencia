@@ -62,8 +62,9 @@ function finalizarCadastro() {
 // }
 
 
-// DEV TEST - FORÇAR STEP
-// currentStep = 2;
+// DEV TEST - FORÇAR STEP e cancelar required
+// currentStep = 1;
 // atualizarConteudo();
 // updateProgress();
 // atualizarBotaoVoltar();
+// document.querySelectorAll("[required]").forEach(el => el.removeAttribute("required"));

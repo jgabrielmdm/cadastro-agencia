@@ -1,21 +1,21 @@
 // ------------ FORM NACIONAL ----------------
 
 
-// const inputCNPJ = document.querySelector('[name="cadastro-agencias-cnpj"]');
-// const inputCEP  = document.querySelector('[name="cadastro-agencias-cep"]');
+const inputCNPJ = document.querySelector('[name="cadastro-agencias-cnpj"]');
+const inputCEP  = document.querySelector('[name="cadastro-agencias-cep"]');
 
-// const estadoInput      = document.querySelector('[name="cadastro-agencia-estado"]');
-// const cidadeInput      = document.querySelector('[name="cadastro-agencia-cidade"]');
-// const enderecoInput    = document.querySelector('[name="cadastro-agencia-endereco"]');
-// const numeroInput      = document.querySelector('[name="cadastro-agencia-numero"]');
-// const bairroInput      = document.querySelector('[name="cadastro-agencia-bairro"]');
-// const complementoInput = document.querySelector('[name="cadastro-agencia-complemento"]');
+const estadoInput      = document.querySelector('[name="cadastro-agencia-estado"]');
+const cidadeInput      = document.querySelector('[name="cadastro-agencia-cidade"]');
+const enderecoInput    = document.querySelector('[name="cadastro-agencia-endereco"]');
+const numeroInput      = document.querySelector('[name="cadastro-agencia-numero"]');
+const bairroInput      = document.querySelector('[name="cadastro-agencia-bairro"]');
+const complementoInput = document.querySelector('[name="cadastro-agencia-complemento"]');
 
-// const setBtn = (enabled) => {
-//     btnNext.disabled = !enabled;
-//     btnNext.style.opacity = enabled ? "1" : "0.5";
-//     btnNext.style.cursor = enabled ? "pointer" : "not-allowed";
-// };
+const setBtn = (enabled) => {
+    btnNext.disabled = !enabled;
+    btnNext.style.opacity = enabled ? "1" : "0.5";
+    btnNext.style.cursor = enabled ? "pointer" : "not-allowed";
+};
 
 setBtn(false);
 

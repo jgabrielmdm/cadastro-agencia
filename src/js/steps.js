@@ -65,12 +65,55 @@ function voltarStep() {
 // ------------------------------------------------------
 // BOTÕES CHAMANDO AS FUNÇÕES
 // ------------------------------------------------------
-document.getElementById('btnNext').addEventListener('click', avancarStep);
+document.getElementById('btnNext').addEventListener('click', handleNextStep);
 document.getElementById('btnPrev').addEventListener('click', voltarStep);
 
 // Esconde o botão de voltar inicialmente
 atualizarBotaoVoltar();
 
+function handleNextStep() {
+
+    // 🚩 Step Agência
+    if (currentStep === 1) {
+
+        // Sempre valida a aba
+        if (!validateCurrentTab()) return;
+
+        // 🚩 Se estiver na ÚLTIMA ABA (Informações Bancárias)
+        if (currentTab === tabs.length - 1) {
+
+            const docInput = document.querySelector('input[name="cadastro-cpf-cnpj-favorecido"]');
+
+            clearError(docInput);
+
+            if (!validarDocumentoCpfCnpj(docInput.value)) {
+                showError(docInput, "CPF/CNPJ inválido ou incompleto.");
+                return;
+            }
+        }
+    }
+
+    avancarStep();
+}
+
+function validarDocumentoCpfCnpj(valor) {
+    const raw = valor.replace(/\D/g, "");
+
+    // Menor que CPF (11 dígitos) -> inválido
+    if (raw.length < 11) return false;
+
+    // Todos dígitos iguais -> inválido
+    if (/^(\d)\1+$/.test(raw)) return false;
+
+    // CPF = 11 dígitos → válido por formato
+    if (raw.length === 11) return true;
+
+    // CNPJ = 14 dígitos → válido
+    if (raw.length === 14) return true;
+
+    // Qualquer outra quantidade -> inválido
+    return false;
+}
 
 // conteudo dos steps
 function atualizarConteudo() {

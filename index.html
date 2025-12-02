@@ -256,7 +256,7 @@
 
                                     <div class="form-group">
                                         <label>Número <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-numero" class="input-form-small" type="text" placeholder="" required>
+                                        <input name="cadastro-agencia-numero" class="input-form-small" type="number" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
@@ -265,8 +265,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Complemento <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-complemento" class="input-form-small" type="text" placeholder="Sala, andar, bloco..." required>
+                                        <label>Complemento</label>
+                                        <input name="cadastro-agencia-complemento" class="input-form-small" type="text" placeholder="Sala, andar, bloco...">
                                     </div>
                                 </div>                                
                             </form>
@@ -284,22 +284,22 @@
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>Telefone Principal <span class="required-label-red">*</span></label>
-                                        <input name="ctt-telefone-principal" class="input-form-small" type="text" placeholder="(00) 00000-0000" required>
+                                        <input name="ctt-telefone-principal" class="input-form-small telefone-mask telefone-validation" type="text" placeholder="(00) 00000-0000" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Telefone Secundário</label>
-                                        <input name="cadastro-agencia-ctt-tel-secundario" class="input-form-small" type="text" placeholder="(00) 00000-0000">
+                                        <input name="cadastro-agencia-ctt-tel-secundario" class="input-form-small telefone-mask" type="text" placeholder="(00) 00000-0000">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Emergência <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-ctt-tel-emergencia" class="input-form-small" type="text" placeholder="(00) 00000-0000" required>
+                                        <input name="cadastro-agencia-ctt-tel-emergencia" class="input-form-small telefone-mask telefone-validation" type="text" placeholder="(00) 00000-0000" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>E-mail Principal <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-email-principal" class="input-form-medium" type="text" placeholder="" required>
+                                        <input name="cadastro-agencia-email-principal" class="input-form-medium email-validation" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
@@ -309,12 +309,12 @@
 
                                     <div class="form-group">
                                         <label>E-mail Diretor <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-email-diretor" class="input-form-medium" type="text" placeholder="" required>
+                                        <input name="cadastro-agencia-email-diretor" class="input-form-medium email-validation" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>E-mail Financeiro <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-email-fin" class="input-form-medium" type="text" placeholder="" required>
+                                        <input name="cadastro-agencia-email-fin" class="input-form-medium email-validation" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
@@ -395,7 +395,7 @@
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>Código do Banco <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-cod-banco" class="input-form-medium" type="text" placeholder="000" required>
+                                        <input name="cadastro-cod-banco" class="input-form-medium" type="number" placeholder="000" required maxlength="3">
                                     </div>
 
                                     <div class="form-group">
@@ -425,7 +425,7 @@
 
                                     <div class="form-group">
                                         <label>CPF/CNPJ do Favorecido <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-cpf-cnpj-favorecido" class="input-form-medium" type="text" placeholder="" required>
+                                        <input name="cadastro-cpf-cnpj-favorecido" class="input-form-medium cpf-cnpj-mask" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
