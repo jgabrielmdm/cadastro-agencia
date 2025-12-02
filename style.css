@@ -281,7 +281,7 @@
     font-weight: 600;
 }
 
-.base-form-layout input{    
+.base-form-layout input, .base-form-layout select{    
     font-size: 14px;
     border: #E2E8F0 solid 1px;
     background-color: #F8FAFC;
@@ -382,15 +382,11 @@
   border: 1px solid #d8d8d8;
   border-radius: 8px;
   text-align: center;
-  cursor: pointer;
+  cursor: default;
   background: #fff;
   transition: .3s;
   font-weight: 500;
   color: #333;
-}
-
-.tab-item:hover {
-  background: #f6f6f6;
 }
 
 .tab-item.active {
@@ -399,14 +395,16 @@
   border: none;
 }
 
-/* cores específicas por aba ativa */
 .tab-item.active {
   background-color: #1D5E2F;
   color: #fff;
   border: none;
 }
 
-
+.tab-item.completed {
+  background: #1D5E2F;
+  color: #fff;
+}
 
 .tab-content {
   padding: 15px;
@@ -566,4 +564,19 @@
     border-color: #1D5E2F;
     box-shadow: 0 0 0 2px rgba(29, 94, 47, 0.20);
     transition: 0.25s ease;
+}
+
+
+/* ESTILO DE VALIDAÇÃO */
+
+.error-msg {
+    color: #FB2C36;
+    font-size: 13px;
+    margin-top: 4px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.success-msg{
+    text-align: left;
 }

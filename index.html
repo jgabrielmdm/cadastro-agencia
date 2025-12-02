@@ -181,12 +181,12 @@
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>Razão Social <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-razao-social" class="input-form-medium" type="text" placeholder="Nome legal da empresa">
+                                        <input name="cadastro-agencia-razao-social" class="input-form-medium" type="text" placeholder="Nome legal da empresa" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Nome Fantasia <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-nome-fantasia" class="input-form-medium" type="text" placeholder="Nome comercial">
+                                        <input name="cadastro-agencia-nome-fantasia" class="input-form-medium" type="text" placeholder="Nome comercial" required>
                                     </div>
 
                                     <div class="form-group">
@@ -207,37 +207,66 @@
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>País <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-pais" class="input-form-small" type="text" placeholder="" value="Brasil" disabled>
+                                        <input name="cadastro-agencia-pais" class="input-form-small" type="text" placeholder="" value="Brasil" readonly>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Estado <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-estado" class="input-form-small" type="text" placeholder="UF">
+                                        <select name="cadastro-agencia-estado" class="input-form-small" required>
+                                            <option value="">Selecione...</option>
+                                            <option value="AC">AC</option>
+                                            <option value="AL">AL</option>
+                                            <option value="AP">AP</option>
+                                            <option value="AM">AM</option>
+                                            <option value="BA">BA</option>
+                                            <option value="CE">CE</option>
+                                            <option value="DF">DF</option>
+                                            <option value="ES">ES</option>
+                                            <option value="GO">GO</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MT">MT</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MG">MG</option>
+                                            <option value="PA">PA</option>
+                                            <option value="PB">PB</option>
+                                            <option value="PR">PR</option>
+                                            <option value="PE">PE</option>
+                                            <option value="PI">PI</option>
+                                            <option value="RJ">RJ</option>
+                                            <option value="RN">RN</option>
+                                            <option value="RS">RS</option>
+                                            <option value="RO">RO</option>
+                                            <option value="RR">RR</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SP">SP</option>
+                                            <option value="SE">SE</option>
+                                            <option value="TO">TO</option>
+                                        </select>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Cidade <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-cidade" class="input-form-small" type="text" placeholder="">
+                                        <input name="cadastro-agencia-cidade" class="input-form-small" type="text" placeholder=""  required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Endereço <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-endereco" class="input-form-large" type="text" placeholder="Rua, Avenida...">
+                                        <input name="cadastro-agencia-endereco" class="input-form-large" type="text" placeholder="Rua, Avenida..." required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Número <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-numero" class="input-form-small" type="text" placeholder="">
+                                        <input name="cadastro-agencia-numero" class="input-form-small" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Bairro <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-bairro" class="input-form-small" type="text" placeholder="">
+                                        <input name="cadastro-agencia-bairro" class="input-form-small" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Complemento <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-complemento" class="input-form-small" type="text" placeholder="Sala, andar, bloco...">
+                                        <input name="cadastro-agencia-complemento" class="input-form-small" type="text" placeholder="Sala, andar, bloco..." required>
                                     </div>
                                 </div>                                
                             </form>
@@ -255,7 +284,7 @@
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>Telefone Principal <span class="required-label-red">*</span></label>
-                                        <input name="ctt-telefone-principal" class="input-form-small" type="text" placeholder="(00) 00000-0000">
+                                        <input name="ctt-telefone-principal" class="input-form-small" type="text" placeholder="(00) 00000-0000" required>
                                     </div>
 
                                     <div class="form-group">
@@ -265,12 +294,12 @@
 
                                     <div class="form-group">
                                         <label>Emergência <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-ctt-tel-emergencia" class="input-form-small" type="text" placeholder="(00) 00000-0000">
+                                        <input name="cadastro-agencia-ctt-tel-emergencia" class="input-form-small" type="text" placeholder="(00) 00000-0000" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>E-mail Principal <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-email-principal" class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-agencia-email-principal" class="input-form-medium" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
@@ -280,12 +309,12 @@
 
                                     <div class="form-group">
                                         <label>E-mail Diretor <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-email-diretor" class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-agencia-email-diretor" class="input-form-medium" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>E-mail Financeiro <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-email-fin" class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-agencia-email-fin" class="input-form-medium" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
@@ -295,7 +324,7 @@
 
                                     <div class="form-group">
                                         <label>Contato Financeiro <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-ctt-fin" class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-agencia-ctt-fin" class="input-form-medium" type="text" placeholder="" required>
                                     </div>
                                 </div>                                
                             </form>
@@ -333,7 +362,7 @@
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>Referência Comercial Principal <span class="required-label-red">*</span></label>
-                                        <input name="ref-comercial-principal" class="input-form-medium" type="text" placeholder="">
+                                        <input name="ref-comercial-principal" class="input-form-medium" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
@@ -343,7 +372,7 @@
 
                                     <div class="form-group">
                                         <label>Referência Bancária Principal <span class="required-label-red">*</span></label>
-                                        <input name="ref-bancaria-principal" class="input-form-medium" type="text" placeholder="">
+                                        <input name="ref-bancaria-principal" class="input-form-medium" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
@@ -366,37 +395,37 @@
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>Código do Banco <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-cod-banco" class="input-form-medium" type="text" placeholder="000">
+                                        <input name="cadastro-cod-banco" class="input-form-medium" type="text" placeholder="000" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Nome do Banco <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-nome-do-banco" class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-nome-do-banco" class="input-form-medium" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Agência <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-banco" class="input-form-small" type="text" placeholder="">
+                                        <input name="cadastro-agencia-banco" class="input-form-small" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Conta <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-conta-banco" class="input-form-small" type="text" placeholder="">
+                                        <input name="cadastro-conta-banco" class="input-form-small" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Dígito <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-digito-banco" class="input-form-small" type="text" placeholder="">
+                                        <input name="cadastro-digito-banco" class="input-form-small" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Nome do Favorecido <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-nome-favorecido" class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-nome-favorecido" class="input-form-medium" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>CPF/CNPJ do Favorecido <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-cpf-cnpj-favorecido" class="input-form-medium" type="text" placeholder="">
+                                        <input name="cadastro-cpf-cnpj-favorecido" class="input-form-medium" type="text" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
@@ -413,7 +442,7 @@
 
                                     <div class="form-group">
                                         <label>Como Conheceu a E-HTL? <span class="required-label-red">*</span></label>
-                                        <select name="cadastro-conheceu-ehtl" class="input-form-large select-input">
+                                        <select name="cadastro-conheceu-ehtl" class="input-form-large select-input" required>
                                             <option value="" selected disabled>Selecione uma opção</option>
                                             <option value="Eventos">Eventos</option>
                                             <option value="Reserva Fácil">Reserva Fácil</option>
@@ -650,12 +679,12 @@
 
                         <div class="doc-card" data-doc="contrato-social">
                             <div class="doc-info">
-                                <h4>Contrato Social <span class="required">*</span></h4>
-                                <p>Documento que registra a constituição da empresa</p>
+                                <h4>Comprovante Bancário <span class="required">*</span></h4>
+                                <p>Com dados da conta visíveis (agência, conta)</p>
                             </div>
 
                             <label class="upload-box">
-                                <input name="doc-contrato-social" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <input name="doc-comprovante-bancario" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
                                 <span class="upload-btn">📁 Anexar Arquivo</span>
                             </label>
 
@@ -713,6 +742,15 @@
         </div>
     </div>
 </section>
-<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script src="src/js/steps.js"></script>
+<script src="src/js/step-agencia.js"></script>
+<script src="src/js/ctt-financeiro.js"></script>
+<script src="src/js/doc-control.js"></script>
+<script src="src/js/validation-form-nac.js"></script>
+<script src="src/js/validation-form-inter.js"></script>
+<script src="src/js/masks.js"></script>
+<script src="src/js/script.js"></script>
 </body>
 </html>
