@@ -93,7 +93,104 @@ function handleNextStep() {
         }
     }
 
+    if (currentStep === 2) {
+
+        let isValid = true;
+
+        const senhaInput = document.querySelector('input[name="cadastro-usuario-senha"]');
+        const confirmInput = document.querySelector('.confirm-password');
+
+        // -------------------------
+        // 1) VALIDAR FORM DE CREDENCIAIS
+        // -------------------------
+        const credentialFields = document.querySelectorAll('#form-credenciais-de-acesso input');
+
+        credentialFields.forEach(input => {
+
+            clearError(input);
+
+            if (input.required && !input.value.trim()) {
+                showError(input, "Este campo é obrigatório.");
+                isValid = false;
+            }
+
+            if (input.classList.contains("username-validation")) {
+                const usernameRegex = /^[a-z0-9._]+$/;
+
+                if (!usernameRegex.test(input.value)) {
+                    showError(input, "Use apenas letras minúsculas, números, . ou _");
+                    isValid = false;
+                }
+
+                if (input.value.length < 4) {
+                    showError(input, "O login deve ter no mínimo 4 caracteres.");
+                    isValid = false;
+                }
+            }
+
+            if (input.classList.contains("password-validation")) {
+                const rules = validatePasswordRules(input.value);
+
+                if (!Object.values(rules).every(Boolean)) {
+                    showError(input, "A senha não atende todos os requisitos.");
+                    isValid = false;
+                }
+            }
+        });
+
+        // Confirm password
+        if (senhaInput && confirmInput && senhaInput.value !== confirmInput.value) {
+            showError(confirmInput, "As senhas não coincidem.");
+            isValid = false;
+        }
+
+
+        // -------------------------
+        // 2) VALIDAR FORM DE USUÁRIO PRINCIPAL
+        // -------------------------
+        const userFormFields = document.querySelectorAll('#form-cadastro-usuario-principal input, #form-cadastro-usuario-principal select');
+
+        userFormFields.forEach(input => {
+
+            clearError(input);
+
+            // Required
+            if (input.required && !input.value.trim()) {
+                showError(input, "Este campo é obrigatório.");
+                isValid = false;
+            }
+
+            // Telefone (se quiser manter validação extra)
+            if (input.classList.contains("telefone-mask")) {
+                const raw = input.value.replace(/\D/g, "");
+                if (raw.length < 10 || raw.length > 11) {
+                    showError(input, "Telefone inválido. Informe DDD e número completo.");
+                    isValid = false;
+                }
+            }
+
+            // CPF (se quiser validar como o outro)
+            if (input.name === "cadastro-usuario-cpf") {
+
+                const raw = input.value.replace(/\D/g, "");
+
+                // Regras base: tamanho mínimo + não pode ser repetido
+                if (raw.length !== 11 || /^(\d)\1+$/.test(raw)) {
+                    showError(input, "CPF inválido.");
+                    isValid = false;
+                }
+
+                // (Se quiser depois validar o DV real do CPF, me avise)
+            }
+        });
+
+
+        // ❌ Se algo inválido → NÃO AVANÇA
+        if (!isValid) return;
+    }
+
     avancarStep();
+  
 }
 
 function validarDocumentoCpfCnpj(valor) {

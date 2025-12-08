@@ -405,17 +405,17 @@
 
                                     <div class="form-group">
                                         <label>Agência <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-agencia-banco" class="input-form-small" type="text" placeholder="" required>
+                                        <input name="cadastro-agencia-banco" class="input-form-small" type="number" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Conta <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-conta-banco" class="input-form-small" type="text" placeholder="" required>
+                                        <input name="cadastro-conta-banco" class="input-form-small" type="number" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Dígito <span class="required-label-red">*</span></label>
-                                        <input name="cadastro-digito-banco" class="input-form-small" type="text" placeholder="" required>
+                                        <input name="cadastro-digito-banco" class="input-form-small" type="number" placeholder="" required>
                                     </div>
 
                                     <div class="form-group">
@@ -482,46 +482,51 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Nome <span class="required-label-red">*</span></label>
-                                <input name="cadastro-usuario-name" class="input-form-medium" type="text" placeholder="Primeiro nome">
+                                <input name="cadastro-usuario-name" class="input-form-medium" type="text" placeholder="Primeiro nome" required>
                             </div>
 
                             <div class="form-group">
-                                <label>Sobrenome</label>
-                                <input name="cadastro-usuario-sobrenome" class="input-form-medium" type="text" placeholder="Sobrenome">
+                                <label>Sobrenome <span class="required-label-red">*</span></label>
+                                <input name="cadastro-usuario-sobrenome" class="input-form-medium" type="text" placeholder="Sobrenome" required>
                             </div>
 
                             <div class="form-group">
                                 <label>CPF <span class="required-label-red">*</span></label>
-                                <input name="cadastro-usuario-cpf" class="input-form-medium" type="text" placeholder="000.000.000-00">
+                                <input name="cadastro-usuario-cpf" class="input-form-medium" type="text" placeholder="000.000.000-00" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Cargo  <span class="required-label-red">*</span></label>
-                                <input name="cadastro-usuario-cargo" class="input-form-medium" type="text" placeholder="Ex: Diretor, Gerente...">
+                                <input name="cadastro-usuario-cargo" class="input-form-medium" type="text" placeholder="Ex: Diretor, Gerente..." required>
                             </div>
 
                             <div class="form-group">
                                 <label>Data de Nascimento  <span class="required-label-red">*</span></label>
-                                <input name="cadastro-usuario-data-nascimento" class="input-form-medium" type="text" placeholder="Ex: Diretor, Gerente...">
+                                <input name="cadastro-usuario-data-nascimento" class="input-form-medium" type="text" placeholder="00/00/0000" required>
                             </div>
 
                             <div class="form-group">
-                                <label>Gênero  <span class="required-label-red">*</span></label>
-                                <input name="cadastro-usuario-genero" class="input-form-medium" type="text" placeholder="Selecione">
+                                <label>Gênero <span class="required-label-red">*</span></label>
+                                <select name="cadastro-usuario-genero" class="input-form-medium" required>
+                                    <option value="" disabled selected>Selecione...</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Feminino">Feminino</option>
+                                    <option value="Prefiro não informar">Prefiro não informar</option>
+                                </select>
                             </div>
 
                             <div class="form-group">
                                 <label>Telefone  <span class="required-label-red">*</span></label>
-                                <input name="cadastro-usuario-telefone" class="input-form-small" type="text" placeholder="(00) 00000-0000">
+                                <input name="cadastro-usuario-telefone" class="input-form-small telefone-mask" type="text" placeholder="(00) 00000-0000" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Celular  <span class="required-label-red">*</span></label>
-                                <input name="cadastro-usuario-celular" class="input-form-small" type="text" placeholder="(00) 00000-0000">
+                                <input name="cadastro-usuario-celular" class="input-form-small telefone-mask" type="text" placeholder="(00) 00000-0000" required>
                             </div>
 
                             <div class="form-group">
-                                <label>Ramal  <span class="required-label-red">*</span></label>
+                                <label>Ramal</label>
                                 <input name="cadastro-usuario-ramal" class="input-form-small" type="text" placeholder="0000">
                             </div>
                         </div>                                
@@ -538,46 +543,45 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label>E-mail <span class="required-label-red">*</span></label>
-                                <input name="cadastro-usuario-email" class="input-form-large" type="text" placeholder="usuario@email.com">
+                                <input name="cadastro-usuario-email" class="input-form-large" type="text" placeholder="usuario@email.com" required>
                                 <p style="font-size: 12px; text-align: left; margin-top: 5px;">Este e-mail será usado para recuperação de senha e notificações do sistema</p>
                             </div>
 
                             <div class="form-group">
                                 <label>Login (Username) <span class="required-label-red">*</span></label>
-                                <input name="cadastro-usuario-username" class="input-form-large" type="text" placeholder="">
+                                <input name="cadastro-usuario-username" class="input-form-large  username-validation" type="text" placeholder="" required>
                                 <p class="form-info">⚠️ Sem caracteres especiais (@, #, %, etc.) e deve ser diferente do e-mail</p>
                             </div>
 
                             <div class="form-group">
                                 <label>Senha <span class="required-label-red">*</span></label>
-                                <input name="cadastro-usuario-senha" class="input-form-medium" type="text" placeholder="">
+                                <input name="cadastro-usuario-senha" class="input-form-medium password-validation" type="password" placeholder="" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Confirmar Senha <span class="required-label-red">*</span></label>
-                                <input class="input-form-medium" type="text" placeholder="">
+                                <input class="input-form-medium confirm-password" type="password" placeholder="" required>
                             </div>
                         </div>                                
                     </form>                    
                 </div>
                 <div class="form-info-inter">
-                        <p class="form-info-inter-title">Requisitos de Senha</p>
+                    <p class="form-info-inter-title">Requisitos de Senha</p>
 
-                        <div class="form-info-inter-itens">
-                            <div>
-                                <p><span style="color:#00BC7D;">✓</span> Mínimo de 8 caracteres</p>
-                                <br>
-                                <p><span style="color:#00BC7D;">✓</span> Números</p>
-                            </div>
-                            
-                            <div>
-                                <p><span style="color:#00BC7D;">✓</span> Letras maiúsculas e minúsculas</p>   
-                                <br>                             
-                                <p><span style="color:#00BC7D;">✓</span> Caracteres especiais (!@#$%)</p>
-                            </div>
-                            
+                    <div class="form-info-inter-itens">
+                        <div>
+                            <p><span class="rule rule-length">✗</span> Mínimo de 8 caracteres</p>
+                            <br>
+                            <p><span class="rule rule-number">✗</span> Números</p>
+                        </div>
+                        
+                        <div>
+                            <p><span class="rule rule-case">✗</span> Letras maiúsculas e minúsculas</p>
+                            <br>
+                            <p><span class="rule rule-special">✗</span> Caracteres especiais (!@#$%)</p>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
 
@@ -599,7 +603,7 @@
                             </div>
 
                             <label class="upload-box">
-                                <input name="doc-contrato-social" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <input name="doc-contrato-social" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg" required>
                                 <span class="upload-btn">📁 Anexar Arquivo</span>
                             </label>
 
@@ -616,7 +620,7 @@
                             </div>
 
                             <label class="upload-box">
-                                <input name="doc-comp-inscricao-cnpj" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <input name="doc-comp-inscricao-cnpj" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg" required>
                                 <span class="upload-btn">📁 Anexar Arquivo</span>
                             </label>
 
@@ -633,7 +637,7 @@
                             </div>
 
                             <label class="upload-box">
-                                <input name="doc-id-responsavel-legal" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <input name="doc-id-responsavel-legal" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg" required>
                                 <span class="upload-btn">📁 Anexar Arquivo</span>
                             </label>
 
@@ -650,7 +654,7 @@
                             </div>
 
                             <label class="upload-box">
-                                <input name="doc-cadastro-pes-fis-resp" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <input name="doc-cadastro-pes-fis-resp" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg" required>
                                 <span class="upload-btn">📁 Anexar Arquivo</span>
                             </label>
 
@@ -667,7 +671,7 @@
                             </div>
 
                             <label class="upload-box">
-                                <input name="doc-comp-residencia" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <input name="doc-comp-residencia" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg" required>
                                 <span class="upload-btn">📁 Anexar Arquivo</span>
                             </label>
 
@@ -684,7 +688,7 @@
                             </div>
 
                             <label class="upload-box">
-                                <input name="doc-comprovante-bancario" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg">
+                                <input name="doc-comprovante-bancario" type="file" class="file-input" accept=".pdf,.png,.jpeg,.jpg" required>
                                 <span class="upload-btn">📁 Anexar Arquivo</span>
                             </label>
 
@@ -746,6 +750,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <script src="src/js/steps.js"></script>
 <script src="src/js/step-agencia.js"></script>
+<script src="src/js/step-users.js"></script>
 <script src="src/js/ctt-financeiro.js"></script>
 <script src="src/js/doc-control.js"></script>
 <script src="src/js/validation-form-nac.js"></script>

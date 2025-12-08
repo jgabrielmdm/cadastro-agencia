@@ -9,7 +9,6 @@ document.querySelectorAll(".file-input").forEach(input => {
         const msg = card.querySelector(".status-msg");
         const statusBox = card.querySelector(".upload-status");
 
-        // sempre limpa a área
         statusBox.style.display = "flex";
         icon.textContent = "";
         msg.textContent = "";
@@ -19,7 +18,7 @@ document.querySelectorAll(".file-input").forEach(input => {
             return;
         }
 
-        // validar extensão
+        // valida extensão
         if (!allowedTypes.includes(file.type)) {
             icon.textContent = "❌";
             icon.style.color = "#FB2C36";
@@ -28,7 +27,7 @@ document.querySelectorAll(".file-input").forEach(input => {
             return;
         }
 
-        // validar tamanho
+        // valida tamanho
         if (file.size > MAX_SIZE_MB * 1024 * 1024) {
             icon.textContent = "❌";
             icon.style.color = "#FB2C36";
@@ -43,3 +42,39 @@ document.querySelectorAll(".file-input").forEach(input => {
         msg.textContent = file.name;
     });
 });
+
+function validateRequiredDocsStep4() {
+    let isValid = true;
+
+    // pega todos os inputs de arquivo no step
+    const fileInputs = document.querySelectorAll('#content-step-4 .file-input');
+
+    fileInputs.forEach(input => {
+        
+        // só valida os que têm required
+        if (!input.hasAttribute("required")) return;
+
+        const card = input.closest(".doc-card");
+        const statusBox = card.querySelector(".upload-status");
+        const icon = card.querySelector(".status-icon");
+        const msg = card.querySelector(".status-msg");
+
+        // limpa estado anterior
+        statusBox.style.display = "none";
+        icon.textContent = "";
+        msg.textContent = "";
+
+        const file = input.files[0];
+
+        // Se obrigatório e não anexado → mostrar erro
+        if (!file) {
+            statusBox.style.display = "flex";
+            icon.textContent = "❌";
+            icon.style.color = "#FB2C36";
+            msg.textContent = "Este documento é obrigatório.";
+            isValid = false;
+        }
+    });
+
+    return isValid;
+}
