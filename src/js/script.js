@@ -63,9 +63,9 @@ function finalizarCadastro() {
 
 
 // DEV TEST - FORÇAR STEP e cancelar required
-currentStep = 3;
-atualizarConteudo();
-updateProgress();
-atualizarBotaoVoltar();
-document.querySelectorAll("[required]").forEach(el => el.removeAttribute("required"));
-btnNext.removeAttribute("disabled");
+// currentStep = 0;
+// atualizarConteudo();
+// updateProgress();
+// atualizarBotaoVoltar();
+// document.querySelectorAll("[required]").forEach(el => el.removeAttribute("required"));
+// btnNext.removeAttribute("disabled");

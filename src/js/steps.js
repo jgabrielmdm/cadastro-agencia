@@ -3,6 +3,13 @@
 const steps = document.querySelectorAll('.icons-step-content');
 const progressFill = document.querySelector('.progress-line-fill');
 
+const stepLabels = [
+    "início",
+    "agência",
+    "usuário",
+    "documentos"
+];
+
 let currentStep = 0;
 
 function updateProgress() {
@@ -224,6 +231,13 @@ function atualizarConteudo() {
         }
     });
 
+    atualizarTextoBotaoVoltar();
+
+    if (currentStep !== 1) {
+        btnNext.classList.remove("btn-next-ajuste-bancario");
+        btnPrevTab?.classList.remove("prev-tab-ajuste-bancario");
+    }
+
     // Step 2 = esconder Next e mostrar botão "Próxima aba"
     if (currentStep === 1) {
         btnNext.style.display = "none";
@@ -281,3 +295,17 @@ btnInternacional.addEventListener('click', () => {
  formInterControl.style.display = "block";
  btnNext.style.display = "none";
 });
+
+function atualizarTextoBotaoVoltar() {
+    const btnPrev = document.getElementById("btnPrev");
+
+    if (!btnPrev) return;
+
+    // Primeiro step
+    if (currentStep === 0) {
+        btnPrev.textContent = "Voltar";
+        return;
+    }
+
+    btnPrev.textContent = `Voltar para  ${stepLabels[currentStep - 1]}`;
+}

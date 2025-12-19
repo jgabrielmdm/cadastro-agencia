@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 <div class="steps-session">
@@ -18,38 +19,40 @@
 
             <div class="icon-wrapper">
                 <div class="icons-step-content icon-selected">
-                    <img src="inicio.png" alt="">
+                    <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <span>Início</span>
             </div>
 
             <div class="icon-wrapper">
                 <div class="icons-step-content">
-                    <img src="agencia.png" alt="">
+                    <i class="fa-regular fa-building"></i>
                 </div>
                 <span>Agência</span>
             </div>
 
             <div class="icon-wrapper">
                 <div class="icons-step-content">
-                    <img src="usuario.png" alt="">
+                    <i class="fa-solid fa-user"></i>
                 </div>
                 <span>Usuário</span>
             </div>
 
             <div class="icon-wrapper">
                 <div class="icons-step-content">
-                    <img src="documentos.png" alt="">
+                    <i class="fa-regular fa-file"></i>
                 </div>
                 <span>Documentos</span>
             </div>
         </div>
     </div>
-</div>   
+</div> 
+
 <section style="background-color: #F8FAFC;">
     <div class="steps-content">
+        <button id="btnPrev">Voltar</button>
         <div class="step-content active" id="content-step-1">
-            <img src="inicio-step.png" alt="">
+            
             <h2>Onde está localizada sua agência?</h2>
             <p>Escolha a localização para personalizarmos o cadastro</p>
 
@@ -157,8 +160,7 @@
             </div>             
         </div>
 
-        <div class="step-content" id="content-step-2">
-            <img src="agencia-step.png" alt="">
+        <div class="step-content" id="content-step-2">            
             <h2>Informações da Agência</h2>
             <p>Organize os dados em categorias para facilitar o preenchimento</p>
 
@@ -468,8 +470,7 @@
             </div>
         </div>
 
-        <div class="step-content" id="content-step-3">
-            <img src="usuario-step.png" alt="">
+        <div class="step-content" id="content-step-3">            
             <h2>Usuário Principal</h2>
             <p>Configure o usuário administrador que terá acesso completo ao sistema</p>
 
@@ -585,8 +586,7 @@
             </div>
         </div>
 
-        <div class="step-content" id="content-step-4">
-            <img src="documentos-step.png" alt="">
+        <div class="step-content" id="content-step-4">            
             <h2>Documentação</h2>
             <p>Envie os documentos necessários para concluir o cadastro</p>
 
@@ -741,7 +741,7 @@
         </div>
 
         <div class="steps-buttons">
-            <button id="btnPrev">Voltar</button>
+            
             <button id="btnNext">Continuar</button>
         </div>
     </div>

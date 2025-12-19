@@ -31,6 +31,17 @@ function changeTab(index) {
   } else {
     btnPrevTab.style.display = "inline-block";
   }
+
+  // 🔥 AJUSTE DE MARGIN SOMENTE NA ABA BANCÁRIO
+  const isLastTab = currentTab === tabs.length - 1;
+    const isStepAgencia = currentStep === 1;
+    if (isStepAgencia && isLastTab) {
+        btnNext.classList.add("btn-next-ajuste-bancario");
+        btnPrevTab.classList.add("prev-tab-ajuste-bancario");
+    } else {
+        btnNext.classList.remove("btn-next-ajuste-bancario");
+        btnPrevTab.classList.remove("prev-tab-ajuste-bancario");
+    }
 }
 
 btnPrevTab.addEventListener("click", () => {
